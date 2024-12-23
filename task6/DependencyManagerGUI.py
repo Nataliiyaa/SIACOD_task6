@@ -38,7 +38,7 @@ class DependencyManagerGUI:
         self.actions_frame.pack(pady=10)
 
         self.sort_button = tk.Button(
-            self.actions_frame, text="Выполнить сортировку", command=self.app.perform_sort
+            self.actions_frame, text="Выполнить сортировку", command=self.app.result_sort
         )
         self.sort_button.grid(row=0, column=0, padx=5)
 

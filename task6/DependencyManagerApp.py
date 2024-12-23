@@ -33,7 +33,6 @@ class DependencyManagerApp:
                 messagebox.showerror("Ошибка", f"Зависимость {parent} -> {child} уже существует.")
                 return
 
-        # Добавление зависимостей
         for child in children_list:
             self.graph.add_dependency(parent, [child])
 
@@ -43,7 +42,7 @@ class DependencyManagerApp:
         self.graph.clear()
         self.gui.clear_list()
 
-    def perform_sort(self):
+    def result_sort(self):
         try:
             order = self.graph.tarjan_algorithm()
             messagebox.showinfo("Результат", f"Порядок установки: {', '.join(order)}")
