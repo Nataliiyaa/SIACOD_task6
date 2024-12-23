@@ -23,8 +23,8 @@ class DependencyGraph:
         result = []
 
         def dfs(node):
-            if node in recursion_stack:  # Если узел уже в текущем пути, это цикл
-                raise Exception(f"Циклическая зависимость обнаружена: {node} уже в пути.")
+            if node in recursion_stack:
+                raise Exception(f"Обнаружен цикл: {node} уже в пути.")
             if node not in visited:
                 visited.add(node)
                 recursion_stack.add(node)
